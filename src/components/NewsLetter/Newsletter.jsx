@@ -18,7 +18,7 @@ const Newsletter = ({ titleNewsLetter }) => {
       console.error("Error submitting the form", error);
       alert("Ocorreu um erro ao enviar o formulário. Tente novamente.");
     } finally {
-      setSubmitting(false); // Certifique-se de que o isSubmitting é atualizado
+      setSubmitting(false); 
     }
   };
 
