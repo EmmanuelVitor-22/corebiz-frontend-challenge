@@ -1,0 +1,96 @@
+@use '../../../variables' as *;
+
+.product-carousel {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  .product-carousel__titleShowcase {
+    width: 65%;
+    margin: 0 auto;
+
+    @media (max-width: 968px) {
+      width: 85%;
+    }
+
+    @media (max-width: 481px) {
+      width: 95%;
+    }
+
+    h2 {
+      font-weight: 900;
+      font-size: 20px;
+    }
+
+    .product-carousel__divider {
+      border: none;
+      border-bottom: 4.3px solid $gray-line;
+      width: 65px;
+      margin-top: 6px;
+    }
+  }
+
+  .product-carousel__slider {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 65%;
+    height: 407px;
+
+    @media (max-width: 968px) {
+      max-width: 85%;
+    }
+
+    @media (max-width: 481px) {
+      max-width: 95%;
+    }
+
+    .slick-prev,
+    .slick-next {
+      &:before {
+        font-size: 20px;
+      }
+    }
+
+    .slick-next {
+      right: -20px;
+    }
+
+    .slick-prev {
+      left: -20px;
+    }
+
+    .slick-dots {
+      bottom: -15px;
+
+      @media (max-width: 769px) {
+        bottom: 37px;
+      }
+
+      @media (max-width: 481px) {
+        bottom: 5%;
+      }
+
+      li {
+        margin: 0 5px;
+
+        button:before {
+          font-size: 10px;
+          opacity: 1;
+          color: $gray-dots;
+        }
+
+        &.slick-active button:before {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  &__slide {
+
+    @media (max-width: 769px) {
+      width: 95% !important;
+    }
+  }
+}
