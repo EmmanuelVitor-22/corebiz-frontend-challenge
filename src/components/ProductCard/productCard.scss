@@ -1,0 +1,132 @@
+@use '../../variables' as *;
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 216px;
+  min-width: 132px;
+  height: 353px;
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    background-color: $background-light;
+
+  }
+
+  &__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 7px;
+    padding-bottom: 14px;
+ 
+  }
+
+  &__title {
+    font-family: $font-nunito;
+    font-size: 12px;
+    font-weight: 600;
+    color: $gray-light;
+    text-transform: uppercase;
+
+    @media (max-width: 768px) {
+      font-size: 10px;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    height: 12px;
+    width: 70px;
+    color: $primary;
+    margin-top: 4px;
+    margin-bottom: 10px;
+  }
+
+  &__price {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: $font-nunito;
+    font-weight: 700;
+    color: $black;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+
+    &--original {
+      text-decoration: line-through;
+      color: $gray-light;
+      margin-bottom: 2px;
+      font-size: 12px;
+      font-weight: 400;
+
+      @media (max-width: 768px) {
+        font-size: 11px;
+      }
+    }
+  }
+
+  &__installments {
+    font-size: 11px;
+    font-weight: 400;
+    color: $gray-light;
+    margin: 4px 0 8px;
+  }
+
+  &__btn {
+    background-color: $black;
+    color: $white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 58%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    min-height: 36px; 
+    @media (max-width: 768px) {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &:hover .product-card__btn {
+    opacity: 1;
+  }
+}
+
+.product-card__discount-flag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  background-color: $primary;
+  color: $white;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  font-weight: bold;
+  font-size: 16px;
+  transform: rotate(270deg);
+
+  span {
+    right: 10px;
+    transform: rotate(90deg);
+    position: absolute;
+    bottom: 15px;
+  }
+}

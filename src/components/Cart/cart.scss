@@ -1,0 +1,36 @@
+.cart-icon {
+  display: flex;
+  align-items: center;
+  gap: 5px; // Espaçamento entre o ícone e a bolinha
+
+  &__icon {
+    width: 24px; // Ajuste o tamanho conforme necessário
+    height: 24px;
+  }
+
+  &__badge {
+    width: 14px;
+    height: 14px;
+    background: red;
+    border-radius: 50%;
+    font-size: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; // Alinhamento vertical do texto
+  }
+
+  &__badge-animate {
+    animation: bounce 0.3s;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
