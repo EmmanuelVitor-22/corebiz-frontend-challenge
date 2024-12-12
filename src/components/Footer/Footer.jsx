@@ -32,7 +32,7 @@ const Footer = () => {
           </a>
         </button>
       </section>
-      <div className="footer__container">
+      <div className="footer__wrapper">
         <section className="footer__location">
           <address className="footer__address">
             <h3 className="footer__title">Localização</h3>
@@ -45,8 +45,6 @@ const Footer = () => {
           </address>
         </section>
       </div>
-      </div>
-
       <div className="footer__logo-container">
           <span>Created by</span>
           <img
@@ -55,6 +53,9 @@ const Footer = () => {
             alt="Logo Footer"
           />
         </div>
+      </div>
+
+      
 
     </footer>
   );
