@@ -28,6 +28,13 @@
   overflow: hidden;
 }
 
+
+.slick-slide img {
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
 .slick-dots {
   bottom: 20px;
 
