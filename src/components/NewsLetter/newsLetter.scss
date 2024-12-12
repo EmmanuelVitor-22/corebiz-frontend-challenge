@@ -6,9 +6,10 @@
     padding: 24px 0 36px;
     background-color: $beige;
 
-    @media (max-width:769px) {
+    @media (max-width: 769px) {
         max-height: none;
     }
+
     &__wrapper {
         display: flex;
         flex-direction: column;
@@ -19,7 +20,6 @@
         @media (max-width: 768px) {
             width: 90%;
         }
-
     }
 
     &__title {
@@ -41,10 +41,9 @@
         flex-direction: column;
         align-items: center;
         margin: 0 auto;
-        row-gap: 16px;
-
-        h3,
-        p {
+        
+       
+        &__title, &__message {
             font-family: $font-lato;
             font-weight: 700;
             font-size: 14px;
@@ -53,10 +52,38 @@
             text-align: center;
         }
 
-        p {
+        &__message {
             font-weight: 400;
             font-size: 12px;
             line-height: 12px;
+        }
+        &__footer{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+
+            .newsletter__success__newSubmit  {
+                font-family: $font-lato;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 14px;
+            text-align: center;
+            color: $white;
+            width: 100%;
+            max-width: 50%;
+            height: 48px;
+            padding: 14px 20px;
+            border-radius: 5px;
+            border: none;
+            background: $black;
+
+            @media (max-width: 769px) {
+                width: 100%;
+                max-width: none;
+            }
+           
+            }
         }
     }
 
@@ -73,7 +100,8 @@
 
         &__group {
             width: 40%;
-            @media (max-width:769px) {
+
+            @media (max-width: 769px) {
                 width: 100%;
             }
         }
@@ -97,11 +125,9 @@
                 line-height: 14px;
                 color: $gray-medium;
             }
-
         }
 
-        &__submit,
-        &__newSubmit {
+        &__submit {
             font-family: $font-lato;
             font-weight: 700;
             font-size: 14px;
@@ -116,16 +142,13 @@
             border: none;
             background: $black;
 
-            @media (max-width:769px) {
+            @media (max-width: 769px) {
                 width: 100%;
                 max-width: none;
             }
         }
 
-        &__newSubmit {
-            width: 100%;
-            max-width: 50%;
-        }
+       
 
         &__error {
             margin-top: 8px;
@@ -137,6 +160,4 @@
             color: $primary;
         }
     }
-
-
 }

@@ -1,18 +1,18 @@
 import React from "react";
 
 const NewsletterSuccess = ({ handleReset }) => (
-  <section className="newsletter-success" aria-labelledby="newsletter-success__title">
-    <header className="newsletter-success__header">
-      <h1 id="newsletter-success__title" className="newsletter-success__title">
+  <section className="newsletter__success" aria-labelledby="newsletter__success__title">
+    
+      <h2  className="newsletter__success__title">
         Seu e-mail foi cadastrado com sucesso!
-      </h1>
-    </header>
-    <p className="newsletter-success__message">
+      </h2>
+   
+    <p className="newsletter__success__message">
       A partir de agora você receberá as novidades e ofertas exclusivas.
     </p>
-    <footer className="newsletter-success__footer">
+    <footer className="newsletter__success__footer">
       <button
-        className="newsletter-success__button"
+        className="newsletter__success__newSubmit"
         onClick={handleReset}
         type="button"
       >
